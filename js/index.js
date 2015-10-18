@@ -100,9 +100,6 @@ window.onload = function(){
 }
 
 $(function(){
-	$('img').lazyload({
-		effect:"fadeIn"
-	});
 	$('.bg-pic').animate({
 		top:'-22px',opacity:1
 	},1200,function(){
