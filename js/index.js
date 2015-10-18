@@ -1,11 +1,11 @@
 window.onload = function(){
 	var exp = document.getElementById('exp');		//获取整个轮播容器
-	var list = document.getElementById('exp-list'); //获取轮播div列表
+	var list = document.getElementById('exp-list'); 	//获取轮播div列表
 	var buttons = document.getElementById('buttons').getElementsByTagName('span');	//获取所有小圆点
-	var prev = document.getElementById('prev');				//获取左箭头
-	var next = document.getElementById('next');				//获取右箭头
+	var prev = document.getElementById('prev');					//获取左箭头
+	var next = document.getElementById('next');					//获取右箭头
 	var index = 0;
-	var animated = false;									//声明变量保存是否有动画在执行
+	var animated = false;								//声明变量保存是否有动画在执行
 	var timer;
 
 	prev.onclick = function(){
@@ -38,9 +38,9 @@ window.onload = function(){
 	function move(offset){
 		var left = parseInt(list.style.left) + offset;	//声明变量保存新的左边距
 		animated = true;
-		var time = 300;							//位移总时间(毫秒)
+		var time = 300;						//位移总时间(毫秒)
         var inteval = 10;						//位移间隔时间(毫秒)
-        var speed = offset/(time/inteval);		//每一次的位移量
+        var speed = offset/(time/inteval);				//每一次的位移量
         
         var go = function (){
             if((speed>0 && parseInt(list.style.left)<left) || (speed<0 && parseInt(list.style.left) > left)) {
